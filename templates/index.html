@@ -1,0 +1,144 @@
+<html>
+    <head>
+        <title>Breast cancer detaction model</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .image-1
+            {
+                width: 100%;
+                height: 400px;
+            }
+            .heading{
+                min-height: 60px;
+                background-color: #333;
+                border-radius: 30px;
+            }
+            .heading h1{
+                font-size: 30px;
+                font-weight: bold;
+                padding: 20px;
+                font-family: sans-serif;
+                color: white;
+                text-align: center;
+
+            }
+            .from-sec
+            {
+                background-color: #777;
+                height: 550px;
+            }
+            .pred
+            {
+                padding-top: 80px;
+            }
+            input[type="text"]
+            {
+                border: none;
+                padding: 10px;
+                width: 250px;
+                margin-right: 5px;
+                margin-bottom: 4px;
+
+            }
+            .btn
+            {
+                margin-top: 50px;
+            }
+            input[type="submit"]
+            {
+                color: white;
+                background-color: #333;
+                font-size: 20px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                border: none;
+                height: 50px;
+                width: 150px;
+                border-radius: 50px;
+                padding: 10px;
+                margin-bottom: 40px;
+            }
+            input[type="submit"]:hover
+            {
+                background-color: rgb(255, 93, 93);
+                font-weight: bold;
+            }
+            .from-sec h1{
+                color: white;
+                font-size: 30px;
+            }
+            .footer h3{
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 20px;
+                font-size: 25px;
+                font-weight: bold;
+                font-family: sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <div class="images">
+                <img src="static\images\lab_banner.jpg" class="image-1">
+            </div>
+        </div>
+        <div class="container">
+            <div class="heading">
+                <h1>Breast cancer predication model</h1>
+            </div>
+        </div>
+        <div class="from-sec">
+            <center>
+                <form name="prediction" action="predict" method="POST" class="pred">
+                <input type="text" placeholder="mean radius" name="mean radius">
+                <input type="text" placeholder="mean texture" name="mean texture">
+                <input type="text" placeholder="mean perimeter" name="mean perimeter">
+                <input type="text" placeholder="mean area" name="mean area">
+                <input type="text" placeholder="mean smoothness" name="mean smoothness"><br>
+                <input type="text" placeholder="mean compactness" name="mean compactness">
+                <input type="text" placeholder="mean concavity" name="mean concavity">
+                <input type="text" placeholder="mean concave points" name="mean concave points">
+                <input type="text" placeholder="mean symmetry" name="mean symmetry">
+                <input type="text" placeholder="mean fractal dimension" name="mean fractal dimension"><br>
+                <input type="text" placeholder="radius error" name="radius error">
+                <input type="text" placeholder="texture error" name="texture error">
+                <input type="text" placeholder="perimeter error" name="perimeter error">
+                <input type="text" placeholder="area error" name="area error">
+                <input type="text" placeholder="smoothness error" name="smoothness error"><br>
+                <input type="text" placeholder="compactness error" name="compactness error">
+                <input type="text" placeholder="concavity error" name="concavity error">
+                <input type="text" placeholder="concave points error" name="concave points error">
+                <input type="text" placeholder="symmetry error" name="symmetry error">
+                <input type="text" placeholder="fractal dimension error" name="fractal dimension error"><br>
+                <input type="text" placeholder="worst radius" name="worst radius">
+                <input type="text" placeholder="worst texture" name="worst texture">
+                <input type="text" placeholder="worst perimeter" name="worst perimeter">
+                <input type="text" placeholder="worst area" name="worst area">
+                <input type="text" placeholder="worst smoothness" name="worst smoothness"><br>
+                <input type="text" placeholder="worst compactness" name="worst compactness">
+                <input type="text" placeholder="worst concavity" name="worst concavity">
+                <input type="text" placeholder="worst concave points" name="worst concave points">
+                <input type="text" placeholder="worst symmetry" name="worst symmetry">
+                <input type="text" placeholder="worst fractal dimension" name="worst fractal dimension"><br>
+                <div class="btn">
+                    <input type="submit" class="submit" value="Predict">
+                </div>
+                <div>
+                    <h1> {{ prediction_text }}</h1>
+                </div>
+            </form></center>
+        </div>
+        <div class="footer">
+            <h3>
+                Delivery Contact:
+                hgadhiya8980@gmail.com
+            </h3>
+        </div>
+    </body>
+</html>
